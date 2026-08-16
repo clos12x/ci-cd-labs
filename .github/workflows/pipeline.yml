@@ -2,7 +2,7 @@ name: Primer Pipeline CI
 
 on:
   push:
-  
+
 
 jobs:
   hello-ci:
@@ -28,6 +28,9 @@ jobs:
 
       - name: Mostrar versión de Git
         run: git --version
+
+      - name: Prueba de fallo controlado
+        run: exit 1
 
       - name: Finalizar pipeline
         run: echo "Pipeline ejecutado correctamente."
